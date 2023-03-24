@@ -1,0 +1,72 @@
+USE [Market1]
+GO
+
+/****** Object:  Table [dbo].[ADMINTBL]    Script Date: 10/2/2022 9:18:01 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ADMINTBL](
+	[AdminId] [int] NOT NULL,
+	[AdminName] [varchar](50) NOT NULL,
+	[AdminPass] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_ADMINTBL] PRIMARY KEY CLUSTERED 
+(
+	[AdminId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+USE [Market1]
+GO
+
+/****** Object:  Table [dbo].[Orders1]    Script Date: 10/2/2022 9:18:27 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Orders1](
+	[OrderId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL,
+	[ProdCode] [varchar](50) NOT NULL,
+	[ProdName] [varchar](50) NOT NULL,
+	[Price] [float] NOT NULL,
+	[Qty] [int] NOT NULL,
+	[Total] [float] NOT NULL,
+	[Date] [date] NOT NULL
+) ON [PRIMARY]
+GO
+
+
+
+SE [Market1]
+GO
+
+/****** Object:  Table [dbo].[ProductTbl1]    Script Date: 10/2/2022 9:18:41 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ProductTbl1](
+	[ProdId] [int] IDENTITY(1,1) NOT NULL,
+	[ProdCode] [varchar](50) NOT NULL,
+	[ProdName] [varchar](50) NOT NULL,
+	[ProdPrice] [float] NOT NULL,
+	[ProdQty] [int] NOT NULL,
+ CONSTRAINT [PK_ProductTbl1] PRIMARY KEY CLUSTERED 
+(
+	[ProdId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
